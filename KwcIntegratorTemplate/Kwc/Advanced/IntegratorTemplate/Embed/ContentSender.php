@@ -1,5 +1,5 @@
 <?php
-class Kwc_Advanced_IntegratorTemplate_Embed_ContentSender extends Kwf_Component_Abstract_ContentSender_Default
+class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Embed_ContentSender extends Kwf_Component_Abstract_ContentSender_Default
 {
     protected function _render($includeMaster, &$hasDynamicParts)
     {

@@ -1,15 +1,15 @@
 <?php
-class Kwc_Advanced_IntegratorTemplate_Component extends Kwc_Abstract
+class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Component extends Kwc_Abstract
 {
     public static function getSettings($param = null)
     {
         $ret = parent::getSettings($param);
         $ret['componentName'] = trlKwfStatic('Integrator Template');
-        $ret['dataClass'] = 'Kwc_Advanced_IntegratorTemplate_Data';
+        $ret['dataClass'] = 'KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Data';
         $ret['ownModel'] = 'Kwf_Component_FieldModel';
         $ret['generators']['embed'] = array(
             'class' => 'Kwf_Component_Generator_Page_Static',
-            'component' => 'Kwc_Advanced_IntegratorTemplate_Embed_Component',
+            'component' => 'KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Embed_Component',
             'name' => '',
             'filename' => 'embed'
         );

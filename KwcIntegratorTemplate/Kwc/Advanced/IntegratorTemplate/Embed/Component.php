@@ -1,10 +1,10 @@
 <?php
-class Kwc_Advanced_IntegratorTemplate_Embed_Component extends Kwc_Abstract_Composite_Component
+class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Embed_Component extends Kwc_Abstract_Composite_Component
 {
     public static function getSettings($param = null)
     {
         $ret = parent::getSettings($param);
-        $ret['contentSender'] = 'Kwc_Advanced_IntegratorTemplate_Embed_ContentSender';
+        $ret['contentSender'] = 'KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Embed_ContentSender';
         $ret['flags']['hasHeaderIncludeCode'] = true;
         $ret['flags']['hasFooterIncludeCode'] = true;
         $ret['flags']['noIndex'] = true;

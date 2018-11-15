@@ -1,5 +1,5 @@
 <?php
-class Kwc_Advanced_IntegratorTemplate_Form extends Kwc_Abstract_Form
+class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Form extends Kwc_Abstract_Form
 {
     protected function _init()
     {
@@ -10,11 +10,11 @@ class Kwc_Advanced_IntegratorTemplate_Form extends Kwc_Abstract_Form
             ->setAllowBlank(false);
         $this->add(new Kwf_Form_Field_ShowField('template_url', trl('HTML Template URL')))
             ->setWidth(500)
-            ->setData(new Kwc_Advanced_IntegratorTemplate_FormData());
+            ->setData(new KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_FormData());
     }
 }
 
-class Kwc_Advanced_IntegratorTemplate_FormData extends Kwf_Data_Abstract
+class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_FormData extends Kwf_Data_Abstract
 {
     public function load($row, array $info = array())
     {

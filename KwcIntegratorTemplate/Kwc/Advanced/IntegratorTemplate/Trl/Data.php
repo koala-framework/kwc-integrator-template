@@ -1,5 +1,5 @@
 <?php
-class Kwc_Advanced_IntegratorTemplate_Trl_Data extends Kwf_Component_Data
+class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Trl_Data extends Kwf_Component_Data
 {
     public function __get($var)
     {

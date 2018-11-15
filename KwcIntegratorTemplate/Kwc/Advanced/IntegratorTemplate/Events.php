@@ -1,5 +1,5 @@
 <?php
-class Kwc_Advanced_IntegratorTemplate_Events extends Kwc_Abstract_Events
+class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Events extends Kwc_Abstract_Events
 {
     public function getListeners()
     {
