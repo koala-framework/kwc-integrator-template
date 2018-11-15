@@ -3,19 +3,28 @@ class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Component extends Kw
 {
     public static function getSettings($param = null)
     {
-        $ret = parent::getSettings($param);
+        $ret = parent::getSettings($param = null);
         $ret['componentName'] = trlKwfStatic('Integrator Template');
-        $ret['dataClass'] = 'KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Data';
-        $ret['ownModel'] = 'Kwf_Component_FieldModel';
-        $ret['generators']['embed'] = array(
-            'class' => 'Kwf_Component_Generator_Page_Static',
-            'component' => 'KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Embed_Component',
-            'name' => '',
-            'filename' => 'embed'
-        );
+        $ret['contentSender'] = 'KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_ContentSender';
         $ret['extConfig'] = 'Kwf_Component_Abstract_ExtConfig_Form';
+        $ret['ownModel'] = 'Kwf_Component_FieldModel';
         $ret['flags']['noIndex'] = true;
-        $ret['editComponents'] = array('embed');
+        $ret['flags']['hasHeaderIncludeCode'] = true;
+        $ret['flags']['hasFooterIncludeCode'] = true;
+        $ret['removeParts'] = array();
         return $ret;
+    }
+
+    public function getTemplateVars(Kwf_Component_Renderer_Abstract $renderer)
+    {
+        $ret = parent::getTemplateVars($renderer);
+        $ret['includeCode'] = $this->getIncludeCode('content');
+        return $ret;
+    }
+
+    public function getIncludeCode($position)
+    {
+        $position = strtoupper($position);
+        return "\n<!-- APP_INCLUDE_$position - START -->\n###APP_INCLUDE_$position###\n<!-- APP_INCLUDE_$position - END -->\n";
     }
 }

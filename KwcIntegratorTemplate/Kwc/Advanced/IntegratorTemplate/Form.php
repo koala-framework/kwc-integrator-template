@@ -20,6 +20,6 @@ class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_FormData extends Kwf
     {
         return Kwf_Component_Data_Root::getInstance()
             ->getComponentByDbId($row->component_id, array('ignoreVisible' => true))
-            ->getChildComponent('_embed')->getAbsoluteUrl();
+            ->getAbsoluteUrl();
     }
 }
