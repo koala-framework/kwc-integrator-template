@@ -1,0 +1,17 @@
+{
+    "name": "koala-framework/kwc-integrator-template",
+    "description": "Koala Framework Component for Kwc_Advanced_IntegratorTemplate",
+    "homepage": "http://www.koala-framework.org/",
+    "license": "BSD-2-Clause",
+    "type": "library",
+    "require": {
+        "koala-framework/koala-framework": "~5.2"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-0": {
+            "KwcIntegratorTemplate_": ""
+        }
+    }
+}
