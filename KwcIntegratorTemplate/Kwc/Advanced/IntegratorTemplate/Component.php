@@ -8,7 +8,6 @@ class KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_Component extends Kw
         $ret['contentSender'] = 'KwcIntegratorTemplate_Kwc_Advanced_IntegratorTemplate_ContentSender';
         $ret['extConfig'] = 'Kwf_Component_Abstract_ExtConfig_Form';
         $ret['ownModel'] = 'Kwf_Component_FieldModel';
-        $ret['flags']['noIndex'] = true;
         $ret['flags']['hasHeaderIncludeCode'] = true;
         $ret['flags']['hasFooterIncludeCode'] = true;
         $ret['removeParts'] = array();
